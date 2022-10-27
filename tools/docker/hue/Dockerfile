@@ -23,6 +23,8 @@ RUN apt-get update -y && apt-get install -y \
   python3.8-distutils \
   rsync \
   curl \
+  xmlsec1 \
+  libxmlsec1-openssl \
   sudo \
   git && \
   rm -rf /var/lib/apt/lists/*
