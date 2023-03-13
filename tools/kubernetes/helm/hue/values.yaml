@@ -4,6 +4,9 @@ image:
    pullPolicy: "Always"
 hue:
   replicas: 2
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
   database:
     create: true
     persist: true
@@ -72,6 +75,7 @@ aws:
   accessKeyId: ""
   secretAccessKey: ""
   region: "us-east-1"
+  allowEnvironmentCredentials: "yes"
 hive:
   site: |
     <!--

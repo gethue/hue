@@ -21,8 +21,12 @@ data:
     [aws]
     [[aws_accounts]]
     [[[default]]]
+    {{- if eq .Values.aws.allowEnvironmentCredentials "yes" }}
+    allow_environment_credentials={{ .Values.aws.allowEnvironmentCredentials }}
+    {{ else }}
     access_key_id={{ .Values.aws.accessKeyId }}
     secret_access_key={{ .Values.aws.secretAccessKey }}
+    {{- end }}
     region={{ .Values.aws.region }}
 
     [notebook]
