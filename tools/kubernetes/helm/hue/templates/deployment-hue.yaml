@@ -84,6 +84,18 @@ spec:
           mountPath: /etc/nginx/sites-available/hue
           subPath: hue
 {{ end }}
+{{- with .Values.hue.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+{{- with .Values.hue.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+{{- with .Values.hue.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
       volumes:
         - name: config-volume
           configMap:
