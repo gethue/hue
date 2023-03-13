@@ -75,7 +75,7 @@ aws:
   accessKeyId: ""
   secretAccessKey: ""
   region: "us-east-1"
-  allowEnvironmentCredentials: "yes"
+  allowEnvironmentCredentials: "no"
 hive:
   site: |
     <!--
