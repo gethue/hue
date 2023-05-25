@@ -87,8 +87,8 @@ RUN ./build/env/bin/pip install --no-cache-dir \
   infi.clickhouse_orm==1.0.4 \
   mysqlclient \
   PyAthena==2.25.2
-  # PyAthena == 3.0.0 is latest, but not working with current configuration \
-  # otherwise, 'VisitableType' object is not subscriptable
+  # PyAthena == 3.x.x is latest, but not working with current configuration \
+  # otherwise, 'VisitableType' object is not subscriptable in Hue UI
 
 USER hue
 
