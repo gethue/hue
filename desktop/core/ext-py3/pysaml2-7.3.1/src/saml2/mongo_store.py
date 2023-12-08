@@ -62,7 +62,7 @@ class SessionStorageMDB:
             res.append({"assertion": from_dict(item["assertion"], ONTS, True), "to_sign": item["to_sign"]})
         if len(res) == 1:
             return res[0]
-        elif res is []:
+        elif res == []:
             return None
         else:
             raise SystemError("More then one assertion with the same ID")

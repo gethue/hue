@@ -583,7 +583,7 @@ class Saml2Client(Base):
             )
         else:
             srvs = self.metadata.attribute_service(entityid, binding)
-            if srvs is []:
+            if srvs == []:
                 raise SAMLError("No attribute service support at entity")
 
             destination = next(locations(srvs), None)
