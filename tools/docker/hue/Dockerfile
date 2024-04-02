@@ -81,7 +81,8 @@ RUN ./build/env/bin/pip install --no-cache-dir \
   # Needed for Jaeger \
   threadloop \
   # Fix Can't load plugin: sqlalchemy.dialects:clickhouse \
-  sqlalchemy-clickhouse \
+  # sqlalchemy-clickhouse \ The repo isn't maintained yet 
+  clickhouse-sqlalchemy==0.2.6 \
   # sqlalchemy-clickhouse depend on infi.clickhouse_orm \
   # install after sqlalchemy-clickhouse and version == 1.0.4 \
   # otherwise Code: 516, Authentication failed will display \
